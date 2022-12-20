@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/home/:basezone?" element={<HomePage />} />
         <Route path="/help" element={<HelpOptions />} />
         <Route path="/alerts" element={<AlertsPage />} />
       </Routes>

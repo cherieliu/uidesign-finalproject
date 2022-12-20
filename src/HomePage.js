@@ -7,6 +7,7 @@ import nightmap from './Images/neutral zone night.png';
 import Iframe from 'react-iframe';
 import NavigationMenu from "./Menu";
 import { Zones, ZoneNames, ZoneLocation, ZoneMap } from "./Enums.ts";
+import { useParams } from "react-router-dom";
 
 function getIFrame(zone) {
     switch(zone) {
@@ -20,7 +21,9 @@ function getIFrame(zone) {
 }
 
 function HomePage() {
-    const [zone, setZone] = useState(Zones.NEUTRAL);
+    let { basezone } = useParams();
+    const [zone, setZone] = useState(basezone === '2' ? Zones.DANGER : Zones.NEUTRAL);
+
     const [day, setDay] = useState(true);
     const switchNight = () => {
         setDay(false);
