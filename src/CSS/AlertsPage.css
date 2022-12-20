@@ -163,19 +163,20 @@
     font-family: Verdana;
     font-size: 13px;
     text-align: left;
-    margin: 5px 5px 25px 5px;
+    margin: -8px 0px 0px 0px;
 }
 
 
 .alerticon {
-    position: absolute;
-    transform: translate(15%, 75%);
+    position: relative;
+    transform: translate(80%, 20%);
 }
 
 .clickicon1 {
-    transform: translate(80%, 372%);
+    position: relative;
+    transform: translate(80%, 220%);
 }
 
 .clickicon2 {
-    transform: translate(80%, 900%);
+    transform: translate(80%, 800%);
 }

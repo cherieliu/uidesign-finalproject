@@ -54,6 +54,16 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, -4%);
+  background:rgba(255,0,0,0.8);
+}
+
+.unsafemenu {
+  display: block;
+  width: 340px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -4%);
   background: rgba(1,1,1,0.2);
 }
 

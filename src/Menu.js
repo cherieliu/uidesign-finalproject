@@ -4,7 +4,7 @@ import menu from './Images/menu.png';
 import { useNavigate } from "react-router-dom";
 
 
-export default function NavigationMenu() {
+export default function NavigationMenu(zone) {
     const navigate = useNavigate();
     const [anchor, setAnchor] = useState(null);
     const onClick = (event) => {

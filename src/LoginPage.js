@@ -3,8 +3,7 @@ import './CSS/Index.css';
 import './CSS/LoginPage.css';
 import logo from './Images/location.png';
 import { Button, TextField } from "@mui/material";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import HomePage from "./HomePage";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -16,7 +15,7 @@ function LoginPage() {
         <div className="smartphone">
             <div className="loginheader">
                 <div className="logintext">
-                    ChildLocator
+                    Locus
                 </div>
                 <img src={logo} />
             </div>

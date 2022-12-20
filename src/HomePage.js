@@ -1,12 +1,26 @@
 import React, { Fragment, useState } from "react";
 import './CSS/Index.css';
 import map from './Images/neutral zone map.png';
+import safemap from './Images/safe zone map.png';
+import unsafemap from './Images/unsafe zone map.png';
 import nightmap from './Images/neutral zone night.png';
 import Iframe from 'react-iframe';
 import NavigationMenu from "./Menu";
+import { Zones, ZoneNames, ZoneLocation, ZoneMap } from "./Enums.ts";
+
+function getIFrame(zone) {
+    switch(zone) {
+        case Zones.SAFE:
+            return <Iframe src={safemap} className="map" />;
+        case Zones.NEUTRAL:
+            return <Iframe src={map} className="map" />;
+        case Zones.DANGER:
+            return <Iframe src={unsafemap} className="map" />;
+    }
+}
 
 function HomePage() {
-
+    const [zone, setZone] = useState(Zones.NEUTRAL);
     const [day, setDay] = useState(true);
     const switchNight = () => {
         setDay(false);
@@ -16,12 +30,36 @@ function HomePage() {
         setDay(true);
     }
 
+    // center of screen is ~700, so anything less is left
+    // anything greater is right
+    const handleClick = (e) => {
+        // when the menu button is clicked, doesn't change zone
+        if (e.screenY <= 225) {
+            return;
+        }
+        let next = zone;
+        if (e.screenX < 700) {
+            next = zone - 1;
+            if (next < 0) {
+                next = 0;
+            }
+            setZone(next);
+        } else {
+            next = zone + 1;
+            if (next > 2) {
+                next = 2;
+            } 
+            setZone(next);
+        }
+    }
+
     return (
-        <div className="smartphone">
-            <div className="menu">
+        <div className="smartphone"
+            onClick={handleClick}>
+            <div className={zone === Zones.DANGER ? "menu" : "unsafemenu"}>
             <div className="header">
-                <Fragment><strong>NEUTRAL ZONE</strong></Fragment>
-                <Fragment><span>Precise Location ON</span></Fragment>
+                <Fragment><strong>{ZoneNames[zone]}</strong></Fragment>
+                <Fragment><span>{ZoneLocation[zone]}</span></Fragment>
                 <div className="switch">
                     <NavigationMenu />
                 </div>
@@ -51,7 +89,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="content">
-                {day === true ? <Iframe src={map} className="map" /> : <Iframe src={nightmap} className="map" />}
+                {day === true ? getIFrame(zone) : <Iframe src={nightmap} className="map" />}
             </div>
             </div>
         </div>
