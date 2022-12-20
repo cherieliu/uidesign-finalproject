@@ -56,7 +56,7 @@ function HomePage() {
     return (
         <div className="smartphone"
             onClick={handleClick}>
-            <div className={zone === Zones.DANGER ? "menu" : "unsafemenu"}>
+            <div className={zone !== Zones.DANGER ? "menu" : "unsafemenu"}>
             <div className="header">
                 <Fragment><strong>{ZoneNames[zone]}</strong></Fragment>
                 <Fragment><span>{ZoneLocation[zone]}</span></Fragment>
