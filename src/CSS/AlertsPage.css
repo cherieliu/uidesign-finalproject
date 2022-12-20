@@ -1,0 +1,172 @@
+/* The device with borders */
+.smartphone {
+    position: relative;
+    width: 340px;
+    height: 580px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+/* The camera on the top of the device */
+.smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+/* The home button circle on the bottom of the device */
+.smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+
+/* The screen/content of the device */
+.content {
+    position: relative;
+    width: 340px;
+    height: 540px;
+    margin: 57px 0px 0px 0px;
+}
+
+/* The menu bar on the top of the screen */
+.menu {
+    display: block;
+    width: 340px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -4%);
+    background: rgba(1, 1, 1, 0.2);
+}
+
+/* The menu text header on the screen */
+.header {
+    align-items: center;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* The menu header icon on the screen */
+.switch {
+    align-items: left;
+    transform: translate(4%, -40%);
+}
+
+/* The new div */
+.new {
+    display: block;
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 13%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.7);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    align-items: center;
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+/* The viewed div */
+.viewed {
+    display: block;
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 450%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.7);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+/* sample new alert */
+.samplenew {
+    display: block;
+    width: 270px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 110%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.07);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+}
+
+/* sample viewed alert */
+.sampleviewed {
+    display: block;
+    width: 270px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 400%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.07);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+}
+
+
+.taglinetext {
+    font-family: Verdana;
+    font-size: 16px;
+    text-align: left;
+    color: white;
+    margin: 5px 5px 25px 5px;
+}
+
+.alerttext {
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    margin: 5px 5px 25px 5px;
+}
+
+
+.alerticon {
+    position: absolute;
+    transform: translate(15%, 75%);
+}
+
+.clickicon1 {
+    transform: translate(80%, 372%);
+}
+
+.clickicon2 {
+    transform: translate(80%, 900%);
+}

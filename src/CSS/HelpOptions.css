@@ -1,0 +1,149 @@
+.smartphone {
+    position: relative;
+    width: 340px;
+    height: 580px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+/* The camera on the top of the device */
+.smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+/* The home button circle on the bottom of the device */
+.smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+
+/* The screen/content of the device */
+.content {
+    position: relative;
+    width: 340px;
+    height: 540px;
+    margin: 60px 0px 0px 0px;
+}
+
+/* The menu bar on the top of the screen */
+.menu {
+    display: block;
+    width: 340px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -4%);
+    background: rgba(1, 1, 1, 0.2);
+}
+
+.header {
+    align-items: center;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* The menu header icon on the screen */
+.switch {
+    align-items: left;
+    transform: translate(-310%, -80%);
+}
+
+/* The contacts portion of the screen */
+.contacts {
+    display: block;
+    width: 270px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.05);
+    z-index: -4;
+}
+
+/* The call school button on the screen */
+.callschool {
+    display: flex;
+    height: 50px;
+    width: 270px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 500%);
+    border-radius: 10%;
+    background-color: rgba(1, 1, 1, 0.05);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    align-items: center;
+}
+
+/* The call police button on the screen */
+.callpolice {
+    display: flex;
+    height: 50px;
+    width: 270px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 650%);
+    border-radius: 10%;
+    background: rgba(255, 0, 0, 0.4);
+    z-index: -4;
+    font-family: Verdana;
+    font-size: 13px;
+    align-items: center;
+}
+
+/* The emergency contacts title */
+.title {
+    font-family: Verdana;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* The contacts text formatting */
+.contacttext {
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: left;
+    margin: 5px 5px 5px 5px;
+    padding-bottom: 10px;
+}
+
+/* The green call button spacing */
+.callbutton1 {
+    position: absolute;
+    transform: translate(875%, 120%);
+}
+
+.callbutton2 {
+    position: absolute;
+    transform: translate(875%, 270%);
+}
+
+.callbutton3 {
+    position: absolute;
+    transform: translate(875%, 420%);
+}

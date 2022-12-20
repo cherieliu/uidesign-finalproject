@@ -1,0 +1,134 @@
+.smartphone {
+    position: relative;
+    width: 340px;
+    height: 580px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+  }
+  
+  /* The camera on the top of the device */
+  .smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  /* The home button circle on the bottom of the device */
+  .smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+  }
+  
+/* The screen/content of the device */
+.content {
+  position: relative;
+  width: 340px;
+  height: 540px;
+  margin: -35px 0px 0px 0px;
+}
+
+
+/* The menu bar on the top of the screen */
+.menu {
+  display: block;
+  width: 340px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -4%);
+  background: rgba(1,1,1,0.2);
+}
+
+.header {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;  
+  font-family: Verdana;
+  text-align: center;
+}
+
+.topheader {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* The menu header icon on the screen */
+.switch {
+  align-items: left;
+  transform: translate(-320%, -90%);
+}
+
+/* The mode bar at the bottom of the screen */
+.mode {
+  display: block;
+  width: 175px;
+  height: 55px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 750%);
+  border-radius: 25%;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+/* The night mode */
+.night {
+  position: absolute;
+  transform: translate(6%, 25%);
+  height: 20%;
+}
+
+/* The day mode */
+.day {
+  position: absolute;
+  align-items: center;
+  transform: translate(145%, 40%);
+  height: 20%;
+}
+
+/* The add mode */
+.add{
+  position: absolute;
+  align-items: right;
+  transform: translate(310%, 42%);
+  height: 35%;
+}
+
+/* The search mode */
+.search{
+  position: absolute;
+  align-items: right;
+  transform: translate(78%, 42%);
+}
+
+/* The map background */
+.map{
+  position: relative;
+  z-index: -5;
+  width: 100%;
+  border: none;
+  height: 100%;
+}
+
+  
