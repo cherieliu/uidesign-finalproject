@@ -68,7 +68,7 @@
 /* The menu header icon on the screen */
 .switch {
     align-items: left;
-    transform: translate(4%, -40%);
+    transform: translate(-300%, -80%);
 }
 
 /* The new div */
@@ -87,6 +87,15 @@
     align-items: center;
     color: white;
     padding: 0px 0px 0px 20px;
+}
+
+.newtext {
+    align-items: center;
+    transform: translate(-4%, -5%);
+    font-family: Verdana;
+    font-size: 13px;
+    text-align: center;
+    color: white;
 }
 
 /* The viewed div */
