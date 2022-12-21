@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+This README outlines how to run our code.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This github repository contains code to run our React application. We used Create React App (https://create-react-app.dev/) to generate the original files, the instructions to run the application are below. To run our code, use the command `npm start` in the main directory. It needs to be run locally since we have not deployed the application.
 
-## Available Scripts
+We used 3rd party libraries and packages that need to be installed through npm:
+1) mui
+2) mui/icons-material
+3) react-router-dom
+4) react-iframe
 
-In the project directory, you can run:
+The HTML pages in the application are based on the static HTML we developed for this Checkpoint. Certain aspects from the Figma and the static HTML were not perfectly replicated, given the restraints of Material UI and React in general. To run and view the application, all of the files from the Github must be downloaded to the same folder on a local desktop. Then, they should be easily viewable. 
 
-### `npm start`
+The general flow of the application is: 
+1) Log in to go to the homepage, where the child's location is currently in neutral status.
+2) To see the safe zone, click on the left, and to see the danger zone, click the right.
+3) From the navigation bar, users can go to other pages including: Edit Mode, Alerts, and Help Options.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: The application currently is for the Parent side of the product. For time constraint reasons, we did not build the application for the Child version, since they would be almost identical, with small changes in wording that can be seen through the Figma prototype.
