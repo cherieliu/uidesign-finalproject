@@ -21,10 +21,6 @@ function getIFrame(zone) {
     }
 }
 
-function isInsideWarning(x, y) {
-
-}
-
 function HomePage() {
     const navigate = useNavigate();
     let { basezone } = useParams();
@@ -47,17 +43,16 @@ function HomePage() {
     // anything greater is right
     const handleClick = (e) => {
         // when the menu button is clicked, doesn't change zone
-        console.log(e.clientX, e.clientY);
-        console.log(zone);
-        if (e.screenY <= 225) {
+        if (e.screenY <= 225 || e.screenY >= 700) {
             return;
-        } else if (zone === Zones.DANGER && e.clientX <= 600 && e.clientX >= 450 && e.clientY >= 210 && e.clientY <= 300) {
+        } else if (zone === Zones.DANGER && e.clientX <= 900 && e.clientX >= 450 && e.clientY >= 210 && e.clientY <= 300) {
             navigate('/help');
         }
 
+        console.log(e.screenY);
 
         let next = zone;
-        if (e.clientX < 600) {
+        if (e.clientX < 700) {
             next = zone - 1;
             if (next < 0) {
                 next = 0;
