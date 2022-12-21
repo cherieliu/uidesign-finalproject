@@ -24,7 +24,10 @@ export default function NavigationMenu(zone) {
     };
     const navToAlerts = () => {
         navigate('/alerts');
-    }
+    };
+    const navToUnsafe = () => {
+        navigate('/unsafe');
+    };
 
     const open = Boolean(anchor);
     return (
@@ -47,6 +50,9 @@ export default function NavigationMenu(zone) {
                 </MenuItem>
                 <MenuItem onClick={navToHelp}>
                     Help Options
+                </MenuItem>
+                <MenuItem onClick={navToUnsafe}>
+                    Edit Mode
                 </MenuItem>
             </Menu>
         </>
