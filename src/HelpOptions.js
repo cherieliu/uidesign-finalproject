@@ -5,14 +5,14 @@ import NavigationMenu from './Menu';
 export default function HelpOptions() {
     return (
         <div className="smartphone">
-            <div className="menu">
+            <div className="helpmenu">
                 <div className="header">
                     <Fragment><br></br><strong>HELP OPTIONS</strong></Fragment>
                     <div className="switch">
                         <NavigationMenu />
                     </div>
                 </div>
-                <div className="content">
+                <div className="helpcontent">
                 <div className="title">
                     <Fragment>
                         <br></br>

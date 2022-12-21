@@ -38,15 +38,15 @@
 }
 
 /* The screen/content of the device */
-.content {
+.helpcontent {
     position: relative;
     width: 340px;
     height: 540px;
-    margin: 60px 0px 0px 0px;
+    margin: -30px 0px 0px 0px;
 }
 
 /* The menu bar on the top of the screen */
-.menu {
+.helpmenu {
     display: block;
     width: 340px;
     height: 60px;

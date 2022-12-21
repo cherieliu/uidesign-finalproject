@@ -38,7 +38,7 @@
   }
   
 /* The screen/content of the device */
-.content {
+.homecontent {
   position: relative;
   width: 340px;
   height: 540px;
@@ -47,7 +47,7 @@
 
 
 /* The menu bar on the top of the screen */
-.menu {
+.homemenu {
   display: block;
   width: 340px;
   height: 60px;

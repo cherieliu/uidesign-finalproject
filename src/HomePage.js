@@ -6,7 +6,8 @@ import unsafemap from './Images/unsafe zone map.png';
 import nightmap from './Images/neutral zone night.png';
 import Iframe from 'react-iframe';
 import NavigationMenu from "./Menu";
-import { Zones, ZoneNames, ZoneLocation, ZoneMap } from "./Enums.ts";
+import { Zones, ZoneNames, ZoneLocation } from "./Enums.ts";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function getIFrame(zone) {
@@ -21,6 +22,7 @@ function getIFrame(zone) {
 }
 
 function HomePage() {
+    const navigate = useNavigate();
     let { basezone } = useParams();
     const [zone, setZone] = useState(basezone === '2' ? Zones.DANGER : Zones.NEUTRAL);
 
@@ -31,7 +33,11 @@ function HomePage() {
 
     const switchDay = () => {
         setDay(true);
-    }
+    };
+
+    const navToEdit = () => {
+        navigate('/unsafe');
+    };
 
     // center of screen is ~700, so anything less is left
     // anything greater is right
@@ -40,8 +46,9 @@ function HomePage() {
         if (e.screenY <= 225) {
             return;
         }
+        
         let next = zone;
-        if (e.screenX < 700) {
+        if (e.screenX < 600) {
             next = zone - 1;
             if (next < 0) {
                 next = 0;
@@ -59,7 +66,7 @@ function HomePage() {
     return (
         <div className="smartphone"
             onClick={handleClick}>
-            <div className={zone !== Zones.DANGER ? "menu" : "unsafemenu"}>
+            <div className={zone !== Zones.DANGER ? "homemenu" : "unsafemenu"}>
             <div className="header">
                 <Fragment><strong>{ZoneNames[zone]}</strong></Fragment>
                 <Fragment><span>{ZoneLocation[zone]}</span></Fragment>
@@ -88,10 +95,11 @@ function HomePage() {
                         width={40}
                         height={40}
                         alt="add icon"
+                        onClick={navToEdit}
                     />
                 </div>
             </div>
-            <div className="content">
+            <div className="homecontent">
                 {day === true ? getIFrame(zone) : <Iframe src={nightmap} className="map" />}
             </div>
             </div>

@@ -1,11 +1,10 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import React, { Fragment } from "react";
 import unsafemap from './Images/alert unsafe.jpeg';
 import './CSS/AlertsPage.css';
 import NavigationMenu from "./Menu";
 import { useNavigate } from "react-router-dom";
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { Zones } from "./Enums.ts";
 
 export default function AlertsPage() {
     const navigate = useNavigate();
