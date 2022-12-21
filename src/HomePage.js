@@ -21,6 +21,10 @@ function getIFrame(zone) {
     }
 }
 
+function isInsideWarning(x, y) {
+
+}
+
 function HomePage() {
     const navigate = useNavigate();
     let { basezone } = useParams();
@@ -39,16 +43,21 @@ function HomePage() {
         navigate('/unsafe');
     };
 
-    // center of screen is ~700, so anything less is left
+    // center of screen is ~600, so anything less is left
     // anything greater is right
     const handleClick = (e) => {
         // when the menu button is clicked, doesn't change zone
+        console.log(e.clientX, e.clientY);
+        console.log(zone);
         if (e.screenY <= 225) {
             return;
+        } else if (zone === Zones.DANGER && e.clientX <= 600 && e.clientX >= 450 && e.clientY >= 210 && e.clientY <= 300) {
+            navigate('/help');
         }
-        
+
+
         let next = zone;
-        if (e.screenX < 600) {
+        if (e.clientX < 600) {
             next = zone - 1;
             if (next < 0) {
                 next = 0;
