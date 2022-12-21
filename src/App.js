@@ -12,6 +12,7 @@ function App() {
         <Route path="/home/:basezone?" element={<HomePage />} />
         <Route path="/help" element={<HelpOptions />} />
         <Route path="/alerts" element={<AlertsPage />} />
+        <Route path="/unsafe" element={<UnsafeZone />} />
       </Routes>
     </BrowserRouter>
   );
