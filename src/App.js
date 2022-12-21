@@ -3,6 +3,7 @@ import AlertsPage from './AlertsPage';
 import HelpOptions from './HelpOptions';
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
+import UnsafeZone from './UnsafeZone';
 
 function App() {
   return (
